@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <main>
+    <article class="card card1">
+      <div class="card__images">
+        <picture>
+          <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 700px)">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+        </picture>
+      </div>
+
+      <div class="card__description">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li><img src="./assets/images/icon-list.svg" alt="List Icon"> Product discovery and building what matters</li>
+          <li><img src="./assets/images/icon-list.svg" alt="List Icon"> Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg" alt="List Icon"> And much more!</li>
+        </ul>
+
+        <form class="email" id="myForm">
+          <div class="email__labels">
+            <label for="address" id="address">Email address</label>
+            <label for="error-message" id="email__error-message">Valid email required</label>
+          </div>
+          <input type="email" placeholder="email@company.com" id="email__address">
+        </form>
+
+        <a href="./thanks.html" class="subscribe index">Subscribe to monthly newsletter</a>
+      </div>
+    </article>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+

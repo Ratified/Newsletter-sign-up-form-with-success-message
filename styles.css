@@ -1,0 +1,171 @@
+/* Fonts USed*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap');
+
+/* Reset CSS */
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+li{
+    list-style: none;
+}
+
+img, video, picture, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* General Styling */
+:root{
+   /* Primary */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font */
+    --ff-main:'Roboto', sans-serif;
+
+    --content-padding: 1rem;
+}
+
+body{
+    background-color: var(--Dark-Slate-Grey);
+    font-family: var(--ff-main);
+    font-size: 1rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card{
+   display: grid;
+   background-color: var(--White);
+   max-width: 850px;
+}
+
+.card__description{
+    padding: var(--content-padding);
+
+    display: grid;
+    gap: 1rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+ul > li{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.email{
+  display: flex;
+  flex-direction: column;
+}
+
+.email__labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+#email__error-message{
+    color: var(--Tomato);
+    display: none;
+}
+
+#address{
+    color: var(--Dark-Slate-Grey);
+    font-weight: 700;
+}
+
+#email__address{
+    padding: var(--content-padding);
+}
+
+.subscribe{
+    text-decoration: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    padding: var(--content-padding);
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe:hover{
+    background-color: var(--Tomato);
+}
+
+@media(min-width:500px){
+    .card1{
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 1.5rem;
+    }
+
+    .card__description{
+        gap: 0.5rem;
+        order: -1;
+    }
+
+    .index{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+/* Thanks.html styling */
+
+.card2{
+    /* min-height: 100vh; */
+    display: grid;
+    gap: 15rem;
+    padding: var(--content-padding);
+    max-width: 500px;
+}
+
+@media(min-width: 500px){
+    .card2{
+        gap: 3rem;
+        border-radius: 1.5rem;
+        padding: 3rem;
+    }
+}
+
+.card2__description{
+    display: grid;
+    gap: 1rem;
+}
+
+#display-email{
+    color: var(--Dark-Slate-Grey);
+    font-weight: 700;
+}
