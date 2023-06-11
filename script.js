@@ -1,24 +1,29 @@
-const emailAddress = document.getElementById('email__address');
-const errorMessage = document.getElementById('email__error-message');
-const emailDisplayed = document.getElementById('display-email')
+const errorMessage = document.querySelector('#email__error-message');
+const emailInput = document.querySelector('#email__address');
+var emailSpan = document.getElementById("display-email");
+const submitBtn = document.querySelector('#subscribe');
 
-emailAddress.addEventListener('click', e => {
-    e.preventDefault();
-    if(!validateEmail(emailAddress.value) || emailAddress.value === null){
-        errorMessage.style.display = 'block';
-        emailAddress.style.border = '1px solid red';
-    }
-    if(validateEmail(emailAddress.value)){
-        errorMessage.style.display = 'none';
-        emailAddress.style.border = '1px solid black';
+submitBtn.addEventListener('click', (e) =>{
+  e.preventDefault();
 
-        emailDisplayed.textContent = emailAddress;
-    }
+  const emailAddress = emailInput.value;
+  
+  const isValidEmail = validateEmail(emailAddress);
+
+  if(isValidEmail){
+    errorMessage.style.display = 'none';
+    emailSpan.textContent = emailAddress;
+  }
+
+  else{
+    errorMessage.style.display = 'block';
+    emailInput.style.border = '1px solid red';
+  }
 })
 
+function validateEmail(email){
+      const regex = new RegExp(/^[\w.-]+@[\w.-]+\.\w+$/);
+      return regex.test(email);
+}
 
-function validateEmail(email) {
-    // Regular expression pattern for email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  }
+
