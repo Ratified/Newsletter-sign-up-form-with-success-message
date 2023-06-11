@@ -12,8 +12,8 @@ submitBtn.addEventListener('click', (e) =>{
 
   if(isValidEmail){
     errorMessage.style.display = 'none';
-    window.location.href = './thanks.html';
     emailSpan.value = emailAddress;
+    window.location.href = './thanks.html';
   }
 
   else{
